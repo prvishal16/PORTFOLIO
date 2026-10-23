@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutPortrait from '../assets/about/about-portrait.png.asset.json';
+import aboutPortrait from '../assets/portrait.png';
 import { profile, education } from '../data/portfolio';
 
 const displayEducation = [...education].reverse(); // Deeksha first, then MRCET
@@ -22,9 +22,9 @@ const About = () => {
               </div>
               <div className="w-full aspect-[4/5] overflow-hidden rounded-xl bg-[#ff2a2a] border-2 border-transparent">
                 <img
-                  src={aboutPortrait.url}
+                  src={aboutPortrait}
                   alt={profile.fullName}
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-[center_30%]"
                 />
               </div>
               <div className="px-2 pt-3 pb-1">

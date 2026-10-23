@@ -2,8 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { AnimatePresence, motion } from 'framer-motion';
-import heroVideoAsset from '../assets/hero-video/hero-intro.mp4.asset.json';
-import heroPortraitAsset from '../assets/hero-portrait.png.asset.json';
+import heroVideoUrl from '../assets/hero-video/intro.mp4';
+import heroPortraitUrl from '../assets/hero-portrait.png';
 import { profile } from '../data/portfolio';
 import HeroParticles from './HeroParticles';
 import ResumePopover from './ResumePopover';
@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden bg-black">
       <img
-        src={heroPortraitAsset.url}
+        src={heroPortraitUrl}
         alt="Vishal portrait"
         className={`absolute top-0 left-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}
       />
@@ -55,7 +55,7 @@ const Hero = () => {
         onPlay={() => setIsPlaying(true)}
         className={`absolute top-0 left-0 w-full h-full object-cover z-[1] transition-opacity duration-700 ${isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
-        <source src={heroVideoAsset.url} type="video/mp4" />
+        <source src={heroVideoUrl} type="video/mp4" />
       </video>
 
       {/* Very light gradient for subtle text legibility; keeps the artwork bright */}
